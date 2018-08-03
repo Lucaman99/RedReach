@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav class= "navbar navbar-expand-sm bg-light">
+      <a class= "navbar-brand" href="#">
+        <img src= "RedReach+Logo.png" style="height:50px;padding-bottom:10px;">
+      </a>
+      <ul class= "navbar-nav">
+      </ul>
+    </nav>
+    <div class= "row">
+    <div class= "col-sm-3">
+    <div class= "messaging-options">
+      <div class= "container">
+        <table id="ta">
+          <tbody>
+            <tr>
+              <td>
+                <h5><img src="r.jpg" style="width:50px;height:50px;" class= "profile, rounded-circle"><span class= "profile-text-name">RedReach User #1</span></h5>
+                <p class= "profile-text-description">Founder at ReachReach</p>
+                <p class= "profile-text-message">Thank you for your message. I really enjoyed our conversation yesterday about the possiblity of employment, so...</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5><img src="m.png" style="width:50px;height:50px;" class= "profile, rounded-circle"><span class= "profile-text-name">RedReach User #2</span></h5>
+                <p class= "profile-text-description">Product Manager at Microsoft</p>
+                <p class= "profile-text-message">Thank you for your message. I really enjoyed our conversation yesterday about the possiblity of employment, so...</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5><img src="j.jpg" style="width:50px;height:50px;" class="profile, rounded-circle"><span class= "profile-text-name">RedReach User #3</span></h5>
+                <p class= "profile-text-description">Marketing Recruiter at Pynex</p>
+                <p class= "profile-text-message">Thank you for your message. I really enjoyed our conversation yesterday about the possiblity of employment, so...</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5><img src="t.jpg" style="width:50px;height:50px;" class= "profile, rounded-circle"><span class= "profile-text-name">RedReach User #4</span></h5>
+                <p class= "profile-text-description">Financial Consultant at Trellco</p>
+                <p class= "profile-text-message">Thank you for your message. I really enjoyed our conversation yesterday about the possiblity of employment, so...</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5><img src="f.jpg" style="width:50px;height:50px;" class= "profile, rounded-circle"><span class= "profile-text-name">RedReach User #5</span></h5>
+                <p class= "profile-text-description">Owner at Ruth's Catering</p>
+                <p class= "profile-text-message">Thank you for your message. I really enjoyed our conversation yesterday about the possiblity of employment, so...</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class= "col-sm-9">
+    <div class= "messaging-body">
+      <div class= "container">
+        <div class= "messaging-header">
+          <p id="ty">RedReach User #2</p>
+        </div>
+        <div class= "messaging-area">
+          <table class= "message_rows" id="tg">
+            <tr>
+              <td>
+
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class= "messaging-text">
+          <textarea class= "text-enter" id="xa" rows= "6" cols="110" style="border:none;border-right:solid lightgray 2px;border-bottom:solid lightgray 2px;outline:none;resize:none;padding-left:5px;padding-top:5px;" placeholder="Type a message here"></textarea>
+          <button type="button" class= "btn btn-danger" style="margin-top:-140px;margin-left:55px;" onclick="abc()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+  <style>
+    tr {
+    }
+    tr:hover {
+      cursor:pointer;
+    }
+    .profile {
+      padding-left:5px;
+      padding-top:7px;
+    }
+    .profile-text-name {
+      padding-left:10px;
+      position:relative;
+      margin-top:5px;
+    }
+    .profile-text-description {
+      margin-top:-25px;
+      padding-left:60px;
+    }
+    td {
+      max-width:350px;
+      padding-top:10px;
+      padding-bottom:10px;
+      padding-left:15px;
+      padding-right:15px;
+    }
+    .profile-text-message {
+      margin-top:-7px;
+      color:grey;
+      font-size:14px;
+    }
+    .messaging-options {
+      width:360px;
+      height:91vh;
+      overflow:scroll;
+    }
+    .col-sm-3 {
+      border-right:solid lightgray 2px;
+      min-width:360px;
+
+    }
+    .col-sm-9 {
+      min-width:360px;
+    }
+    #ta {
+       margin-left:-15px;
+       margin-right:-30px;
+    }
+    #ty {
+      text-align:center;
+      padding-top:15px;
+      color:gray;
+    }
+    .messaging-header {
+      border-bottom:solid lightgray 2px;
+      width:76vw;
+      margin-left:-30px;
+    }
+    .messaging-text {
+      width:76vw;
+      height:154px;
+      margin-left:-30px;
+      position:absolute;
+      bottom:0px;
+      border-top:solid lightgray 2px;
+    }
+  </style>
+  <script src = "/socket.io/socket.io.js"></script>
+  <script>
+  var socket = io()
+  socket.on('second', function (data) {
+    var row = document.getElementById('tg').insertRow(0);
+    var cell = row.insertCell(0)
+    cell.innerHTML = data
+  })
+    $(document).ready(function(){
+      $("tr").click(function() {
+        $("tr").css("background-color", "inherit")
+        $(this).css("background-color", "#F9F9F9")
+      })
+    })
+    function abc() {
+      if (document.getElementById('xa').value.length > 0) {
+        socket.emit('first', document.getElementById('xa').value)
+      }
+    }
+  </script>
+</html>
