@@ -83,3 +83,115 @@ position:fixed;
 </style>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--OTHER-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<div class= "selector-element">
+</div>
+<div class= "menu" id="me">
+    <ul class= "vertical-menu">
+      <li>
+        <a href="#">Option 1</a>
+      </li>
+      <li>
+        <a href="#">Option 2</a>
+      </li>
+      <li>
+        <a href="#">Option 3</a>
+      </li>
+      <li>
+        <a href="#">Option 4</a>
+      </li>
+    </ul>
+  </div>
+<style>
+  body {
+    background-color:lightgray;
+  }
+  .menu {
+    height:145px;
+    width:200px;
+    background-color:white;
+    border-radius:4px;
+    border-top:solid #e93f42 3px;
+    box-shadow:0px 0px 15px 5px rgba(30, 31, 33, 0.15);
+    position:fixed;
+    margin-left:74vw;
+    z-index:1001;
+    margin-top:-105px;
+    display:none;
+  }
+  a {
+    color:#666;
+    font-weight:lighter;
+    font-family:Montserrat,Helvetica,Arial,sans-serif;
+    line-height:1.9;
+    text-transform:capitalize;
+    padding:5px 20px;
+    text-decoration:none;
+    font-size:14px;
+  }
+  a:hover {
+    color:#e93f42;
+    text-decoration:none;
+  }
+  li {
+    text-decoration:none;
+    list-style-type:none;
+  }
+  ul {
+    padding-top:10px;
+    margin-left:-30px;
+  }
+  .selector-element {
+  height:30px;
+  width:150px;
+position:fixed;
+    margin-left:76vw;
+    z-index:1001;
+    margin-top:-135px;
+    border:solid;
+}
+.selector-element:hover + .menu {
+ display:block;
+}
+</style>
+<script>
+$(document).ready(function() {
+ $(".selector-element").hover(function () {
+    $(".menu").css("display", "block")
+}, function() {
+ $(".menu").css("display", "none")
+})
+
+$(".menu").hover(function () {
+
+var a = document.getElementById('me')
+var b = window.getComputedStyle(a)
+var c = b.getPropertyValue('display')
+
+if (c == "block") {
+
+    $(".menu").css("display", "block")
+}, function() {
+ $(".menu").css("display", "none")
+}
+})
+
+})
+</script>
