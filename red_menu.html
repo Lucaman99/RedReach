@@ -12,7 +12,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class= "menu">
+<div class= "selector-element">
+</div>
+<div class= "menu">
     <ul class= "vertical-menu">
       <li>
         <a href="#">Option 1</a>
@@ -28,7 +30,6 @@
       </li>
     </ul>
   </div>
-</body>
 <style>
   body {
     background-color:lightgray;
@@ -37,10 +38,14 @@
     height:145px;
     width:200px;
     background-color:white;
-    margin-left:40vw;
-    margin-top:20vh;
     border-radius:4px;
     border-top:solid #e93f42 3px;
+    box-shadow:0px 0px 15px 5px rgba(30, 31, 33, 0.15);
+    position:fixed;
+    margin-left:74vw;
+    z-index:1001;
+    margin-top:-105px;
+    display:none;
   }
   a {
     color:#666;
@@ -50,7 +55,7 @@
     text-transform:capitalize;
     padding:5px 20px;
     text-decoration:none;
-    font-size:16px;
+    font-size:14px;
   }
   a:hover {
     color:#e93f42;
@@ -64,5 +69,17 @@
     padding-top:10px;
     margin-left:-30px;
   }
+  .selector-element {
+  height:30px;
+  width:150px;
+position:fixed;
+    margin-left:76vw;
+    z-index:1001;
+    margin-top:-135px;
+}
+.selector-element:hover + .menu {
+ display:block;
+}
 </style>
+    </body>
 </html>
