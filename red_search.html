@@ -1,0 +1,102 @@
+<body>
+  <div class= "bar">
+    <form>
+    <h6 style="font-family:Montserrat">View By Category:</h6>
+    <table class= "table" style="border:solid 1px lightgray">
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          <input type="text" placeholder="Keywords" name="search_keywords" size="20">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          <select placeholder="Region" name="search_region" style="outline:none">
+            <option value="0">All Regions</option><option class="level-0" value="225">Ancaster</option><option class="level-0" value="233">Brantford</option><option class="level-0" value="132">Burlington</option><option class="level-0" value="226">Cambridge</option>
+            <option class="level-0" value="243">Grimsby</option>
+            <option class="level-0" value="131">Hamilton</option><option class="level-0" value="242">Kitchener-Waterloo</option><option class="level-0" value="240">Milton</option><option class="level-0" value="147">Mississauga</option><option class="level-0" value="221">Oakville</option>
+            <option class="level-0" value="222">Toronto</option>
+          </select>
+        </td>
+      </tr>
+      <!--<tr class="some-row-gray">
+        <td class= "some-data">
+          <select placeholder="Category" name="search_categories[]" style="outline:none">
+            <option class="level-0" value="0">Category</option>
+            <option class="level-0" value="146">Administration</option><option class="level-0" value="82">Arts &amp; Entertainment</option><option class="level-0" value="244">Assembly &amp; Sorting</option><option class="level-0" value="65">Cashier &amp; Floor-person</option><option class="level-0" value="61">Childcare</option>
+            <option class="level-0" value="83">Cleaning &amp; Sanitation</option><option class="level-0" value="84">Coaching &amp; Instruction</option><option class="level-0" value="81">Community &amp; Social</option><option class="level-0" value="79">Construction</option><option class="level-0" value="80">Customer Service</option>
+            <option class="level-0" value="67">Education &amp; Tutoring</option><option class="level-0" value="60">Food &amp; Restaurant</option><option class="level-0" value="232">General Labor</option><option class="level-0" value="145">Hospitality</option><option class="level-0" value="85">Loading &amp; Stocking</option>
+            <option class="level-0" value="238">Mail &amp; Delivery</option><option class="level-0" value="62">Management &amp; Supervision</option><option class="level-0" value="86">Marketing &amp; Media</option><option class="level-0" value="63">Other</option><option class="level-0" value="239">Outdoor</option>
+            <option class="level-0" value="64">Recreation</option><option class="level-0" value="66">Retail &amp; Sales</option><option class="level-0" value="241">Safety</option><option class="level-0" value="190">Sales</option>
+          </select>
+        </td>
+      </tr>-->
+    </table>
+    <br><br>
+    <h6 style="font-family:Montserrat;">Filter By:</h6>
+    <table class= "table2" style="border:solid 1px lightgray">
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          &nbsp;💼  &nbsp;Full-Time Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="full-time" id="job_type_full-time" style="display:inline;left:215px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          &nbsp;✏️  &nbsp;Part-Time Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="part-time" id="job_type_part-time" style="display:inline;left:215px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          &nbsp;📒  &nbsp;Internship&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" id="job_type_internship" value="internship" style="display:inline;left:215px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          &nbsp;☀️  &nbsp;Summer Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="summer" id="job_type_summer" style="display:inline;left:215px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          &nbsp;⏰  &nbsp;Temporary Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="temporary" id="job_type_temporary" style="display:inline;left:215px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+        &nbsp;❤️  &nbsp;Volunteer Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="volunteer" id="job_type_volunteer" style="display:inline;left:215px;" checked="checked">
+        </td>
+      </tr>
+    </table>
+<input type="hidden" name="filter_job_type[]" value>
+  </form>
+  </div>
+</body>
+<style>
+  .table {
+    width:180px;
+  }
+  .some-row-gray {
+    background-color:#e8e8e8;
+  }
+  .some-row-white {
+    background-color:white;
+  }
+  .some-data {
+    width:180px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-family:Montserrat;
+    font-size:13px;
+  }
+  #ke, #re, #ca {
+    font-family:Montserrat;
+    font-size:13px;
+    outline:none;
+  }
+  .bar {
+    border:solid 1px lightgray;
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left:50px;
+    width:280px;
+    border-radius:10px;
+  }
+</style>
