@@ -1,0 +1,323 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <div class= "bar">
+    <form>
+    <h6 style="font-family:Montserrat">View By Category:</h6>
+    <table class= "table" style="border:solid 1px lightgray">
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          <input type="text" placeholder="Keywords" name="search_keywords" size="20">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          <select placeholder="Region" name="search_region" style="outline:none">
+            <option value="0">All Regions</option><option class="level-0" value="225">Ancaster</option><option class="level-0" value="233">Brantford</option><option class="level-0" value="132">Burlington</option><option class="level-0" value="226">Cambridge</option>
+            <option class="level-0" value="243">Grimsby</option>
+            <option class="level-0" value="131">Hamilton</option><option class="level-0" value="242">Kitchener-Waterloo</option><option class="level-0" value="240">Milton</option><option class="level-0" value="147">Mississauga</option><option class="level-0" value="221">Oakville</option>
+            <option class="level-0" value="222">Toronto</option>
+          </select>
+        </td>
+      </tr>
+      <!--<tr class="some-row-gray">
+        <td class= "some-data">
+          <select placeholder="Category" name="search_categories[]" style="outline:none">
+            <option class="level-0" value="0">Category</option>
+            <option class="level-0" value="146">Administration</option><option class="level-0" value="82">Arts &amp; Entertainment</option><option class="level-0" value="244">Assembly &amp; Sorting</option><option class="level-0" value="65">Cashier &amp; Floor-person</option><option class="level-0" value="61">Childcare</option>
+            <option class="level-0" value="83">Cleaning &amp; Sanitation</option><option class="level-0" value="84">Coaching &amp; Instruction</option><option class="level-0" value="81">Community &amp; Social</option><option class="level-0" value="79">Construction</option><option class="level-0" value="80">Customer Service</option>
+            <option class="level-0" value="67">Education &amp; Tutoring</option><option class="level-0" value="60">Food &amp; Restaurant</option><option class="level-0" value="232">General Labor</option><option class="level-0" value="145">Hospitality</option><option class="level-0" value="85">Loading &amp; Stocking</option>
+            <option class="level-0" value="238">Mail &amp; Delivery</option><option class="level-0" value="62">Management &amp; Supervision</option><option class="level-0" value="86">Marketing &amp; Media</option><option class="level-0" value="63">Other</option><option class="level-0" value="239">Outdoor</option>
+            <option class="level-0" value="64">Recreation</option><option class="level-0" value="66">Retail &amp; Sales</option><option class="level-0" value="241">Safety</option><option class="level-0" value="190">Sales</option>
+          </select>
+        </td>
+      </tr>-->
+    </table>
+    <br><br>
+    <h6 style="font-family:Montserrat;">Filter By:</h6>
+    <table class= "table2" style="border:solid 1px lightgray">
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          &nbsp;💼  &nbsp;Full-Time Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="full-time" id="job_type_full-time" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          &nbsp;✏️  &nbsp;Part-Time Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="part-time" id="job_type_part-time" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          &nbsp;📒  &nbsp;Internship&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" id="job_type_internship" value="internship" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          &nbsp;☀️  &nbsp;Summer Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="summer" id="job_type_summer" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          &nbsp;⏰  &nbsp;Temporary Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="temporary" id="job_type_temporary" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          &nbsp;❤️  &nbsp;Volunteer Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="filter_job_type[]" value="volunteer" id="job_type_volunteer" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+    </table>
+<br><br>
+    <table class= "table3" style="border:solid 1px lightgray">
+      <tr class="some-row-gray">
+        <td class= "some-data">
+          &nbsp;👶🏻  &nbsp;All Ages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="all_ages" id="aa" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          &nbsp;👦🏽  &nbsp;Over 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="over_16" id="os" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+<tr class="some-row-gray">
+        <td class= "some-data">
+          &nbsp;👴🏼  &nbsp;Over 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="over_18" id="oe" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+      <tr class="some-row-white">
+        <td class= "some-data">
+          &nbsp;🚫  &nbsp;Not Specified&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="na" id="na" style="display:inline;left:205px;" checked="checked">
+        </td>
+      </tr>
+    </table>
+    <input type="hidden" name="filter_job_type[]" value>
+    <div class="showing_jobs" style="display: none;"></div>
+  </form>
+  </div>
+  <br><br><br><br>
+<div id= "frame-area">
+</div>
+</body>
+<style>
+  .table {
+    width:180px;
+  }
+  .some-row-gray {
+    background-color:#e8e8e8;
+  }
+  .some-row-white {
+    background-color:white;
+  }
+  .some-data {
+    width:180px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-family:Montserrat;
+    font-size:13px;
+  }
+  #ke, #re, #ca {
+    font-family:Montserrat;
+    font-size:13px;
+    outline:none;
+  }
+  .bar {
+    border:solid 1px lightgray;
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left:50px;
+    width:280px;
+    border-radius:10px;
+    position:absolute;
+  }
+  .search_jobs {
+    display:none;
+  }
+  .job_types {
+    display:none;
+  }
+  .job_filters {
+    display:none;
+  }
+  .job-list {
+    width:80%;
+    min-width:200px;
+    margin-right:-100px;
+  }
+  .ptb80 {
+   min-height:1000px;
+}
+.job_listings {
+ margin-left:400px;
+}
+.frames {
+display:none;
+}
+</style>
+<script>
+$(document).ready(function(){
+  var sel_ob = {fulltime: true, parttime: true, internship: true, summer: true, temporary: true, volunteer: true}
+var sel_ob2 = {all_ages: true, over_16: true, over_18: true, na: true}
+  $('.table2').find(':checkbox').change(function(){
+    if(!this.checked) {
+      var x = document.getElementsByClassName("job-type")
+      var t = $(this).val()
+      var u = t.split("-")
+      var k = u.join("")
+      sel_ob[k] = false
+      for (var f = 0; f < u.length; f++) {
+        u[f] = u[f].charAt(0).toUpperCase() + u[f].slice(1)
+      }
+      var g = u.join(" ")
+      for (var i = 0; i < x.length; i++) {
+        if (x[i].innerHTML == g) {
+          x[i].parentNode.parentNode.parentNode.parentNode.parentNode.style.display = "none"
+        }
+      }
+    }
+    if(this.checked) {
+      var x = document.getElementsByClassName("job-type")
+      var t = $(this).val()
+      var u = t.split("-")
+      var k = u.join("")
+      sel_ob[k] = true
+      for (var f = 0; f < u.length; f++) {
+        u[f] = u[f].charAt(0).toUpperCase() + u[f].slice(1)
+      }
+      var g = u.join(" ")
+      for (var i = 0; i < x.length; i++) {
+        if (x[i].innerHTML == g) {
+          x[i].parentNode.parentNode.parentNode.parentNode.parentNode.style.display = "block"
+        }
+      }
+    }
+  })
+  function abc() {
+    var stuff = ["Full Time", "Part Time", "Internship", "Summer", "Temporary", "Volunteer"]
+    for (var n = 0; n < 5; n++) {
+      if (sel_ob[Object.keys(sel_ob)[n]] == false) {
+      var x = document.getElementsByClassName("job-type")
+      for (var l = 0; l < x.length; l++) {
+        if (x[l].innerHTML == stuff[n]) {
+          x[l].parentNode.parentNode.parentNode.parentNode.parentNode.style.display = "none"
+        }
+      }
+    }
+    }
+  }
+  setInterval(abc, 100)
+
+
+
+  
+var description_get = []
+var url_cycle = []
+var initial = 0
+function startload() {
+var url1 = document.getElementsByClassName('job-title')
+  for (var counter2 = 0; counter2 < url1.length; counter2++) {
+    url_cycle.push(url1[counter2].getElementsByTagName('a')[0].href)
+    var new_frame = document.createElement('IFRAME')
+    new_frame.src = url1[counter2].getElementsByTagName('a')[0].href
+    new_frame.classList.add('frames')
+    document.getElementById('frame-area').appendChild(new_frame)
+  }
+  initial = initial + 10
+}
+  setTimeout(startload, 5000)
+
+
+  $(".load_more_jobs").click(function() {
+    function iou() {
+    url_cycle = []
+    var url1 = document.getElementsByClassName('job-title')
+    for (var counter2 = initial; counter2 < url1.length; counter2++) {
+      url_cycle.push(url1[counter2].getElementsByTagName('a')[0].href)
+      var new_frame = document.createElement('IFRAME')
+      new_frame.src = url1[counter2].getElementsByTagName('a')[0].href
+      new_frame.classList.add('frames')
+      document.getElementById('frame-area').appendChild(new_frame)
+    }
+    initial = initial + 10
+  }
+    setTimeout(iou, 10000)
+  })
+
+
+function inner() {
+description_get = []
+for (var counter3 = 0; counter3 < document.getElementsByClassName("job-type").length; counter3++) {
+  //confirm(document.getElementsByClassName("job-type").length)
+  //confirm(description_get)
+  //confirm(url_cycle[counter3])
+  //confirm(document.getElementsByClassName('frames')[counter3].contentWindow.document.getElementsByClassName('mt40')[0].getElementsByTagName('p')[0].innerHTML)
+  //confirm(document.getElementsByClassName('frames')[counter3].contentWindow.document.getElementsByClassName('mt40')[0].getElementsByTagName('p').length)
+var the_first = document.getElementsByClassName('frames')[counter3].contentWindow.document.getElementsByClassName('mt40')[0].getElementsByTagName('p')
+var the_count = 0
+for (var counter4 = 0; counter4 < the_first.length; counter4++) {
+var the_second = the_first[counter4].innerHTML
+if (the_second.indexOf("Applicants can be any age") > -1) { 
+description_get.push("any_age")
+var the_count = the_count + 1
+break
+}
+else if (the_second.indexOf("Applicants must be over 18 years of age") > -1) {
+description_get.push("over_18")
+var the_count = the_count + 1
+break
+}
+else if (the_second.indexOf("Applicants must be over 16 years of age") > -1) {
+description_get.push("over_16")
+var the_count = the_count + 1
+break
+}
+}
+if (the_count == 0) {
+  description_get.push("na")
+}
+}
+}
+setInterval(inner, 500)
+
+
+
+$('.table3').find(':checkbox').change(function() {
+  if (!this.checked) {
+  var check_val = $(this).val()
+  sel_ob2[check_val] = false
+  var check_class = document.getElementsByClassName("job-type")
+  //confirm(check_val)
+  //confirm(description_get)
+  for (var count = 0; count < check_class.length; count++) {
+  if (description_get[count] == check_val) {
+  check_class[count].parentNode.parentNode.parentNode.parentNode.parentNode.style.display = "none";
+}
+}
+}
+if (this.checked) {
+var check_val = $(this).val()
+sel_ob2[check_val] = true
+var check_class = document.getElementsByClassName("job-type")
+//confirm(check_val)
+//confirm(description_get)
+for (var count = 0; count < check_class.length; count++) {
+if (description_get[count] == check_val) {
+check_class[count].parentNode.parentNode.parentNode.parentNode.parentNode.style.display = "block";
+}
+}
+}
+})
+function xyz() {
+  for (var nq = 0; nq < 4; nq++) {
+    if (sel_ob2[Object.keys(sel_ob2)[nq]] == false) {
+    var xo = description_get
+    for (var lo = 0; lo < xo.length; lo++) {
+      if (xo[lo] == Object.keys(sel_ob2)[nq]) {
+        document.getElementsByClassName('job-type')[lo].parentNode.parentNode.parentNode.parentNode.parentNode.style.display = "none"
+      }
+    }
+  }
+  }
+}
+setInterval(xyz, 100)
+})
+</script>
